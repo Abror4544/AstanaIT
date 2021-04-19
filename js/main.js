@@ -31,11 +31,13 @@ $(function () {
         $('.menu_btn_bars').hide();
         $('.menu_btn_bars').css('transform', 'rotate(180deg)');
         $('.menu_btn_close').show();
+        $('body').css('overflow', 'hidden');
         $('.menu_ul').css('transform', 'translateY(0%)');
     })
     $('.menu_btn_close').click(function () {
         $('.menu_btn_close').hide();
         $('.menu_btn_bars').show();
+        $('body').css('overflow', 'auto');
         $('.menu_ul').css('transform', 'translateY(-100%)');
     })
     $('.mobParent').click(()=>{

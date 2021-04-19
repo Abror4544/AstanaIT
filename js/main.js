@@ -1,5 +1,7 @@
 let dot = document.querySelector('.subtoggle');
 let target = document.querySelector('.submenu');
+let form = document.querySelector('.formWrapper');
+let body = document.querySelector('body')
 
 dot.addEventListener('mouseenter', () => {
     target.classList.add('visible');
@@ -9,12 +11,16 @@ dot.addEventListener('mouseleave', () => {
     target.classList.remove('visible');
 });
 
+
+
 $(function () {
     $('.openForm').click( () => {
         $('.formWrapper').css('display', 'flex');
+        $('body').css('overflow', 'hidden');
     })
     $('.closeForm').click( () => {
         $('.formWrapper').css('display', 'none');
+        $('body').css('overflow', 'auto');
     })
     if ($(window).width() < 767) {
         $('.menu_li').removeClass('subtoggle');
@@ -35,4 +41,5 @@ $(function () {
     $('.mobParent').click(()=>{
         $('.submenu').show();
     })
+
 })

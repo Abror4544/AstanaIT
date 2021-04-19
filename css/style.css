@@ -4,6 +4,7 @@
   text-decoration: none;
 }
 
+
 @font-face {
   font-family: 'Roboto';
   src: url("../fonts/Roboto/Roboto-Regular.ttf");
@@ -14,6 +15,85 @@
   src: url("../fonts/Oswald/Oswald-Regular.ttf");
 }
 
+
+
+.mainTitle {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 43px;
+  line-height: 64px;
+  color: #434141;
+  text-align: center;
+}
+
+.titleSpan {
+  color: #FF0000;
+}
+
+.redBtn {
+  background: #FF0000;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 16px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border: none;
+  cursor: pointer;
+  outline-style: none;
+}
+
+.redBtn:hover {
+  background: darkred;
+}
+
+.header .formWrapper .form .formBtn {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.header_texts .header_link {
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+section.two .morePortBlock .morePort {
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+section.three form .formBtn {
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 52px;
+}
+
+
+.cardBlock:hover img{
+  transform: scale(1.2);
+}
+
+.cardBlock:hover .cardTitle{
+  color: #43414199;
+}
+
+
+.cardBlock:hover .cardDesc{
+  color: #91919199;
+}
+
+
+.header{
+  height: 100vh;
+}
 .header_texts {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -47,29 +127,6 @@
   margin: 20px 0 35px 0;
 }
 
-.header_texts .header_link {
-  background: #FF0000;
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 16px;
-  text-align: center;
-  text-transform: uppercase;
-  color: #FFFFFF;
-  text-align: center;
-  padding-top: 15px;
-  padding-bottom: 16px;
-  padding-left: 25px;
-  padding-right: 25px;
-  border: none;
-  cursor: pointer;
-  outline-style: none;
-}
-
-.header_texts .header_link:hover {
-  background: darkred;
-}
 
 .header_texts .headerLeft {
   width: calc(100%/2);
@@ -95,7 +152,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: #F8F8F8;
+  background: #F8F8F899;
   top: 0;
   left: 0;
 }
@@ -199,34 +256,11 @@
   color: #434141;
 }
 
-.header .formWrapper .form .formBtn {
-  background: #FF0000;
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 16px;
-  text-align: center;
-  text-transform: uppercase;
-  color: #FFFFFF;
-  text-align: center;
-  padding-top: 15px;
-  padding-bottom: 16px;
-  padding-left: 20px;
-  padding-right: 20px;
-  border: none;
-  cursor: pointer;
-  outline-style: none;
-}
-
-.header .formWrapper .form .formBtn:hover {
-  background: darkred;
-}
 
 .topmenu {
   position: fixed;
   width: 100%;
-  z-index: 99;
+  z-index: 100;
 }
 
 .topest {
@@ -448,6 +482,7 @@ main .card .img {
   background: #F8F8F8;
   height: 174px;
   position: relative;
+  overflow: hidden;
 }
 
 main .card .img .triangle {
@@ -455,7 +490,8 @@ main .card .img .triangle {
   border: 20px solid transparent;
   border-left: 20px solid #FF0101;
   border-top: 20px solid #FF0101;
-  opacity: 0.8;
+  opacity: 1;
+  z-index: 99;
 }
 
 main .card .img img {
@@ -463,6 +499,7 @@ main .card .img img {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+     transition: .5s;
 }
 
 main .card .cardTitle {
@@ -517,6 +554,10 @@ main .card .moreLink .more:hover {
   color: darkred;
 }
 
+main .card .moreLink .more:hover path {
+  stroke: darkred;
+}
+
 section.one .oneBlock {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -546,17 +587,9 @@ section.one .oneBlock .oneRight {
 }
 
 section.one .oneBlock .oneRight .oneTitle {
-  font-family: 'Oswald';
-  font-style: normal;
-  font-weight: normal;
-  font-size: 43px;
-  line-height: 64px;
-  color: #434141;
+  text-align: left;
 }
 
-section.one .oneBlock .oneRight .oneTitle span {
-  color: #FF0000;
-}
 
 section.one .oneBlock .oneRight .oneDesc {
   margin: 10px 0 11px 0;
@@ -600,19 +633,9 @@ section.two {
 }
 
 section.two .twoTitle {
-  text-align: center;
-  font-family: 'Oswald';
-  font-style: normal;
-  font-weight: normal;
-  font-size: 43px;
-  line-height: 64px;
-  color: #434141;
   margin-bottom: 50px;
 }
 
-section.two .twoTitle span {
-  color: #FF0000;
-}
 
 section.two .portItem {
   height: 361px;
@@ -628,7 +651,7 @@ section.two .portItem .triangle {
   border: 20px solid transparent;
   border-right: 20px solid #FF0101;
   border-bottom: 20px solid #FF0101;
-  opacity: 0.8;
+  opacity: 1;
   right: 0;
   bottom: 0;
 }
@@ -649,29 +672,6 @@ section.two .morePortBlock {
   padding-top: 20px;
 }
 
-section.two .morePortBlock .morePort {
-  background: #FF0000;
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 16px;
-  text-align: center;
-  text-transform: uppercase;
-  color: #FFFFFF;
-  text-align: center;
-  padding-top: 15px;
-  padding-bottom: 16px;
-  padding-left: 25px;
-  padding-right: 25px;
-  border: none;
-  cursor: pointer;
-  outline-style: none;
-}
-
-section.two .morePortBlock .morePort:hover {
-  background: darkred;
-}
 
 section.three {
   padding: 86px 0 100px 0;
@@ -694,19 +694,7 @@ section.three form {
           flex-direction: column;
 }
 
-section.three form h1 {
-  font-family: 'Oswald';
-  font-style: normal;
-  font-weight: normal;
-  font-size: 43px;
-  line-height: 64px;
-  text-align: center;
-  color: #434141;
-}
 
-section.three form h1 span {
-  color: #FF0000;
-}
 
 section.three form .placeHolder {
   font-family: Roboto;
@@ -750,49 +738,15 @@ section.three form .inputs {
           justify-content: space-evenly;
 }
 
-section.three form .formBtn {
-  background: #FF0000;
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 16px;
-  text-align: center;
-  text-transform: uppercase;
-  color: #FFFFFF;
-  text-align: center;
-  padding-top: 15px;
-  padding-bottom: 16px;
-  padding-left: 20px;
-  padding-right: 20px;
-  border: none;
-  cursor: pointer;
-  outline-style: none;
-  margin-top: 52px;
-}
-
-section.three form .formBtn:hover {
-  background: darkred;
-}
 
 section.four {
   padding: 81px 0 98px 0;
 }
 
 section.four .fourTitle {
-  font-family: Oswald;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 43px;
-  line-height: 64px;
-  text-align: center;
-  color: #434141;
   margin-bottom: 62px;
 }
 
-section.four .fourTitle span {
-  color: #FF0000;
-}
 
 section.four .clientsBlock {
   display: -webkit-box;
@@ -1007,15 +961,9 @@ footer .footerest div {
 }
 
 @media screen and (max-width: 992px) {
-  section.one .oneBlock {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
 
   section.one .oneBlock .oneLeft {
-    width: 100%;
+    display: none;
   }
 
   section.one .oneBlock .oneRight {
@@ -1044,6 +992,10 @@ footer .footerest div {
 }
 
 @media screen and (max-width: 767px) {
+   .header{
+      height: 70vh;
+    }  
+
   .header_texts {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;

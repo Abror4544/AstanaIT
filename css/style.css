@@ -1050,7 +1050,9 @@ footer .footerest div {
     font-size: 10px;
     font-weight: 400;
   }
-
+  .mainTitle{
+    font-size: 23px;
+  }
   .menu_navbar {
     padding: 8px 0 9px 0;
     display: -webkit-box;
@@ -1184,8 +1186,8 @@ footer .footerest div {
   }
 
   section.one .oneBlock .oneRight .oneTitle {
-    font-size: 23px;
     line-height: 54px;
+    text-align: center;
   }
 
   section.one .oneBlock .oneRight .oneDesc {
@@ -1208,7 +1210,6 @@ footer .footerest div {
   }
 
   section.two .twoTitle {
-    font-size: 23px;
     line-height: 54px;
   }
 
@@ -1217,8 +1218,7 @@ footer .footerest div {
     background-position: -90px;
   }
 
-  section.three form h1 {
-    font-size: 23px;
+  section.three form h3 {
     line-height: 34px;
   }
 
@@ -1227,7 +1227,6 @@ footer .footerest div {
   }
 
   section.four .fourTitle {
-    font-size: 23px;
     line-height: 34px;
   }
 
